@@ -56,9 +56,9 @@ for (const animal of animals) {
   console.log(animal);
 };
 
-for (const key in dog) {  
-//   console.log(`${key}: ${dog[key]}`);
- console.log(key + ':' + dog[key]);
+for (const key in dog) {
+  console.log(`${key}: ${dog[key]}`);
+//   console.log(key + ':' + dog[key]);
 };
 
 
