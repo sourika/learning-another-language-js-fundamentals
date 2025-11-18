@@ -117,3 +117,30 @@ console.log(fizzbuzz(5));
 //
 //    def __str__(self):
 //        return f"{super().__str__()} that can {self.trick}"
+
+class Animal {
+  constructor(species, name) {
+    this.species = species;
+    this.name = name;
+  }
+  toString() {
+    return `${this.name} is a ${this.species}`;
+  }
+}
+
+class Dog extends Animal {
+  constructor(name, trick) {
+    super('dog', name);
+    this.trick = trick;
+  }
+
+  toString() {
+    return `${super.toString()} that can ${this.trick}`;
+  }
+}
+
+let bob = new Dog('Bob', 'roll over');
+console.log(bob.toString());
+
+let charlie = new Animal('cat', 'Charlie');
+console.log(charlie.toString());
