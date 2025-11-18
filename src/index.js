@@ -4,6 +4,10 @@
 // veggie = "carrot"
 // veggie = "onion"
 
+let veggie = 'carrot';
+veggie = 'onion';
+console.log(veggie);
+
 //
 //
 // =========================
@@ -12,9 +16,19 @@
 
 // animals = ["tiger", "panda", "raccoon"]
 // animals.append("opossum")
+const animals = ['tiger', 'panda', 'raccoon'];
+animals.push('oppossum')
+console.log(animals);
 
 // dog = {"name": "Sprinkles", "age": 3}
 // dog["is_friendly"] = True
+const dog = {
+  'name': 'Sprinkles',
+  'age': 3,
+};
+
+dog.isFriendly = true;
+console.log(dog);
 
 //
 //
@@ -31,6 +45,22 @@
 
 // for k, v in dog.items():
 //    print(f"{k}: {v}")
+
+const num = 5;
+
+for (let i = 0; i < num; i++) {
+  console.log(i);
+};
+
+for (const animal of animals) {
+  console.log(animal);
+};
+
+for (const key in dog) {  
+//   console.log(`${key}: ${dog[key]}`);
+ console.log(key + ':' + dog[key]);
+};
+
 
 //
 //
@@ -49,6 +79,19 @@
 //        return num
 
 // Old way: Function Declaration
+const fizzbuzz = function(num) {
+  if (num % 3 === 0 && num % 5 === 0) {
+    return 'fizzbuzz';
+  } else if (num % 3 === 0) {
+    return 'fizz';
+  } else if (num % 5 === 0) {
+    return 'buzz';
+  } else {
+    return num;
+  }
+};
+
+console.log(fizzbuzz(5));
 
 //
 // ES6 way: Function Expression
